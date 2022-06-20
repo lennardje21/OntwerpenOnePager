@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    background: url("../images/background.gif") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    scroll-snap-type: block mandatory;
+}
+
+body {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1em;
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 0;
+}
+
+header {
+    background-color: rgb(135, 168, 235);
+    color: black;
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    position: sticky;
+    top: 0;
+    width: 100vw;
+}
+
+header a {
+    text-decoration: none;
+    color: black;
+    padding: 20px 40px;
+}
+
+header a:hover {
+    background-color: white;
+    color: black;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+section {
+    scroll-snap-align: center;
+    background-color: #faebd7;
+    border: solid black;
+    border-radius: 30px;
+    padding: 5px;
+    width: 80vw;
+    height: 80vh;
+    margin: 40px auto;
+}
+
+.content {
+    display: flex;
+}
+
+.images {
+    flex-wrap: wrap;
+}
+
+.textLeft {
+    text-align: left;
+    margin-left: 50px;
+    display: inline-block;
+    width: 40%;
+}
+
+.textRight {
+    text-align: left;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: 50px;
+    width: 40%;
+}
+
+.mechImages {
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+}
+
+.textRight img {
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#styleguide {
+    margin-bottom: 100px;
+    padding-left: 50px;
+    text-align: left;
+    width: 500px;
+}
+
+#styleguide img {
+    height: 65vh;
+    width: 50vw;
+}
+
+
+
+footer {
+    text-align: center;
+    background-color: rgba(131, 101, 57, 0.3);
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    margin-top: 20px;
+    padding: 10px;
+    color: white;
+}
+
+@media screen and (max-width: 500px) {
+    body {
+        scroll-snap-type: none;
+    }
+
+    section {
+        scroll-snap-align: unset;
+        height: 100%;
+    }
+
+    main {
+        display: block;
+    }
+
+    header a {
+        padding: 20px 20px;
+    }
+
+    #styleguide img {
+        height: 25vh;
+    }
+
+    footer {
+        position: relative;
+    }
+
+    .textLeft {
+        width: 70%;
+    }
+
+    .textRight {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1570px) {
+    .textLeft {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    body {
+        scroll-snap-type: none;
+    }
+
+    section {
+        scroll-snap-align: unset;
+        height: 100%;
+    }
+
+    .content {
+        display: block;
+    }
+
+    .textLeft {
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+    }
+
+    .textRight {
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+    }
+
+    .mechImages {
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+    }
+}
